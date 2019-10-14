@@ -3,7 +3,7 @@ namespace xadrez
 {
     class Rainha : Peca
     {
-        public Rainha(Tabuleiro tab, Cor cor) : base(cor, tab)
+        public Rainha(Tabuleiro tab, Cor cor) : base(tab, cor)
         {
 
         }
@@ -33,6 +33,7 @@ namespace xadrez
                 {
                     break;
                 }
+                pos.definirValores(pos.linha - 1, pos.coluna);
             }
             // direita
             pos.definirValores(posicao.linha, posicao.coluna + 1);
@@ -43,6 +44,7 @@ namespace xadrez
                 {
                     break;
                 }
+                pos.definirValores(pos.linha, pos.coluna + 1);
             }
             // abaixo
             pos.definirValores(posicao.linha + 1, posicao.coluna);
@@ -53,6 +55,7 @@ namespace xadrez
                 {
                     break;
                 }
+                pos.definirValores(pos.linha + 1, pos.coluna);
             }
             // esquerda
             pos.definirValores(posicao.linha, posicao.coluna - 1);
@@ -63,6 +66,7 @@ namespace xadrez
                 {
                     break;
                 }
+                pos.definirValores(pos.linha, pos.coluna - 1);
             }
             // NO
             pos.definirValores(posicao.linha - 1, posicao.coluna - 1);
